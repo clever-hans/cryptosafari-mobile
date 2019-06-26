@@ -1,0 +1,95 @@
+<!--
+  Generated template for the PaymentsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <!-- hideBackButton=true -->
+  <ion-navbar>
+      <ion-title>
+          <!-- <div style="float:left; display:flex; align-self: center;"align-title:center>Payments</div> -->
+          
+          <div class="title" style="float:center;">
+              <img src="../../assets/imgs/cryptolion.png" float-center  align-self-center width="40px" height="10px"style="display:inline-block" height="40px"/>
+              <div style="color:black">CryptoSafari</div>
+          </div>
+      </ion-title>
+      <ion-buttons end>
+        
+              <button ion-button icon-only menuToggle >
+                      <ion-icon name="md-menu"></ion-icon>
+                  </button>
+      <div class="title" style="float:center;">
+        <img src="../../assets/imgs/cryptolion.png" float-center align-self-center width="40px" height="10px" style="display:inline-block"
+          height="40px" />
+        <div style="color:black">CryptoSafari</div>
+      </div>
+    </ion-title>
+    <ion-buttons end>
+
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="md-menu"></ion-icon>
+      </button>
+
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h3>{{charity.name}}</h3>
+
+  Your donations will help preserve animals and cryptoanimals
+  <br>
+  <br>
+  <br>
+  <hr>
+  <br>
+  <ion-list>
+    <ion-item>
+      <ion-label>Project</ion-label>
+      <ion-select [(ngModel)]="proj_select" multiple="false">
+        <ion-option *ngFor="let project of projects">
+          {{project.name}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Donation type</ion-label>
+      <ion-select [(ngModel)]="toppings" required multiple="false" placeholder="Monthly">
+        <ion-option>One Time</ion-option>
+        <ion-option>Monthly</ion-option>
+        <ion-option>Yearly</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Amount $</ion-label>
+      <ion-input type="number" placeholder="$100" [(ngModel)]="amount"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Full Name</ion-label>
+      <ion-input type="text" [(ngModel)]="name"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <form action="/charge" method="post" id="payment-form" padding>
+    <div class="form-row">
+      <!-- <label for="card-element">
+          Credit or debit card
+        </label> -->
+      <div id="card-element">
+        <!-- A Stripe Element will be inserted here. -->
+      </div>
+
+      <!-- Used to display Element errors. -->
+      <div id="card-errors" role="alert"></div>
+    </div>
+    <div padding>
+      <button ion-button block type="submit">Help the Animals</button>
+    </div>
+  </form>
+
+</ion-content>

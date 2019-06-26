@@ -1,0 +1,46 @@
+page-charities {
+
+
+.charityname {
+    text-emphasis: bold;
+    font-size: 20px;
+}
+
+.charitypic {
+    margin: auto;
+    height: 80px; 
+    width: 80px; 
+    // border: 2px solid #fff;
+//    border-radius: 50%;
+//    box-shadow: 0 0 5px gray;
+    display: block;
+    border: 1px  gray;
+    background: white;
+//    display: block;
+    }
+
+.col-border{  
+    border-bottom: black;
+    border-top: black;
+    border-left: black;
+    border-right:  black;
+    padding: 0%;
+}
+
+.cryptoAnimalText {
+    text-emphasis: bold;
+    font-size: 32px;
+    color: black;
+
+}
+
+.title {
+    // text-align: left;
+    // align-content: center;
+    text-emphasis: bold;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+}

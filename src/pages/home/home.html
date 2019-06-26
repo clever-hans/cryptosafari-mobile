@@ -1,0 +1,83 @@
+<ion-header >
+
+      <ion-navbar hideBackButton>
+          <ion-title>
+            <div h1 class="title" align-title:center>
+              <img src="../../assets/imgs/cryptolion.png" justify-content:center float-left  align-self-center width="40px" height="10px" height="40px"/>
+              <div style="color:black">CryptoSafari</div>
+            </div>
+          </ion-title>
+
+                <ion-buttons end>
+                    <button ion-button icon-only (click)="navigateToLogin()">
+                      <ion-title>Sign In</ion-title>
+                    </button>
+                    <button  ion-button icon-only (click)="navigateToCharities()">
+                       <ion-title><div style= "color:black"> FAQs</div></ion-title>
+                      </button>
+                      <!-- <button ion-button icon-only menuToggle left style="display: inline-block">
+                          <ion-icon name="md-menu"></ion-icon>
+                      </button> -->
+            </ion-buttons>
+  </ion-navbar>
+
+  
+</ion-header>
+
+<ion-content padding class="background1">
+  
+    <!-- <ion-scroll scrollY="true"> -->
+     
+  <ion-grid >
+    
+    <ion-row class="welcome">
+       <ion-col><br></ion-col>
+        <ion-col align-self-center justify-content-end>
+          <!-- align="right" -->
+          <div>
+            <h1>Collectible.</h1>
+            <h1>Breedable.</h1>
+            <h1>Charitable.</h1>
+          </div>
+      </ion-col>
+      <ion-col>
+          <!-- align="left" -->
+        <div >
+          <ion-img [width]="200" [height]="293" class="cryptoimage" src="../../assets/imgs/CryptoSafari.png" ></ion-img>
+        </div>
+        </ion-col>
+        <ion-col><br></ion-col>
+
+
+
+    </ion-row>
+
+
+    <ion-row justify-content-center style="text-align:center">
+
+     <div>
+        <br>
+      <h4 style="text-align:center" > Wildlife conservation through collecting,
+         breeding and selling digital animals.</h4>
+          <br>
+        </div>
+    </ion-row>
+    <ion-row justify-content-center >
+        <a ion-button (click)="navigateToRegistration()">Join the Safari</a>
+        <br>
+    </ion-row>
+
+    <ion-row>
+        <!-- <div >
+            <ion-img [width]="1000" [height]="1000" class="cryptoimage" src="../../assets/imgs/backsplash.png" ></ion-img>
+          </div> -->
+
+    </ion-row>
+  </ion-grid>
+
+  
+
+
+
+</ion-content>
+

@@ -1,0 +1,106 @@
+<!--
+  Generated template for the ApplePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header style="background-color:#5677fc" >
+  <!-- <link rel=”stylesheet” type="text/css" href=”apple.scss”>  -->
+  <ion-navbar>
+      <ion-title>
+            <!-- <div style="float:left; display:flex; align-self: center;"align-title:center>Charities</div> -->
+            
+            <div class="title" style="float:center;">
+                <img src="../../assets/imgs/cryptolion.png" (click)="navigateToHome()" float-center  align-self-center width="40px" height="10px"style="display:inline-block" height="40px"/>
+                <div style="color:black" (click)="navigateToHome()">CryptoSafari</div>
+            </div>
+        </ion-title>
+      <ion-buttons end>
+
+          <button ion-button icon-only menuToggle>
+              <ion-icon name="md-menu"></ion-icon>
+          </button>
+      </ion-buttons>
+  </ion-navbar>
+  
+  <!-- <ion-navbar>
+    <ion-title>{{charity.name}}</ion-title>   
+  </ion-navbar> -->
+
+
+</ion-header>
+
+
+style="background-color:grey; font:roboto; color:white"
+<ion-content  padding class="my-background">
+        <ion-grid>
+                <ion-row class="charityHead" (click)="navigateToCharities()"><div>Charities /&nbsp;</div><div class="charityHeadName"> {{charity.name}}</div></ion-row>
+                <ion-row><br></ion-row>
+                <ion-row justify-content-center>
+                                <!-- align="left" -->
+                    <ion-col>
+                        <div>
+                            <ion-img class="profilepic2"  src={{charity.img}} ></ion-img>
+                        </div>
+                    </ion-col>
+                    <ion-col align-self-center justify-content-end>
+                        <h4 class="stats">${{this.donation_total}}</h4><br>
+                        <div class="statDesc">Raised</div>
+                    </ion-col>
+                    <ion-col align-self-center justify-content-end>
+                        <h4 class="stats">{{this.donation_count}}</h4><br>
+                        Patrons
+                    </ion-col>
+                    <ion-col align-self-center justify-content-end>
+                        <h4 class="stats">9</h4><br>
+                        Animals
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+                
+                   <h1>{{charity.name}}</h1>
+                    <div class="location">{{charity.location}}</div>
+                    <p class="charityDesc">{{charity.description}}</p>
+                
+                    <div class="paymentButton"><button ion-button (click)="navigateToPayments(charity)">+ Add to Portfolio</button></div>
+                    
+                
+                <ion-grid>
+                <ion-row><br></ion-row>
+                <ion-row>
+                        <div class="block_1 hline-certs"></div>
+                </ion-row>
+                <ion-row></ion-row>
+                <ion-row>
+                    <ion-col><p class="certs">Certifications</p><br></ion-col>
+                </ion-row>
+                <ion-row *ngFor="let row of grid">
+                        <ion-col align-self-center class="col-border" *ngFor="let certification of row">
+                                <ion-avatar item-start>
+                                        <ion-img  class="certpic"  src="{{certification.img}}"></ion-img>
+                                </ion-avatar>
+                                <h2 class="certname" >{{certification.name}}</h2>
+                                <p >{{certification.description}}</p>
+                        </ion-col>
+                </ion-row>
+                <ion-row>
+                        <div class="block_1 hline-certs"></div>
+                </ion-row>
+                <ion-row></ion-row>
+                <ion-row>
+                    <ion-col><p class="certs">Projects</p><br></ion-col>
+                </ion-row>
+                <ion-row *ngFor="let row of gridProj">
+                        <ion-col class="col-border" *ngFor="let project of row">
+                                <ion-avatar item-start>
+                                        <ion-img align-self-center  class="projpic"  src="{{project.img}}"></ion-img>
+                                </ion-avatar>
+                                <h2 class="certname" >{{project.name}}</h2>
+                                <p >{{project.description}}</p>
+                        </ion-col>
+                    </ion-row>
+
+        </ion-grid>
+</ion-content>
+

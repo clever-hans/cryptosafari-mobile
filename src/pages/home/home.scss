@@ -1,0 +1,45 @@
+page-home {
+    
+.background1 {
+    background: white;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+}
+
+.title {
+    // text-align: left;
+    // align-content: center;
+    text-emphasis: bold;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+}
+
+.welcome {
+    display: flex;
+    justify-content:center;
+    flex-wrap: nowrap;
+    
+
+}
+
+// .cryptoimage {
+
+//     display: flex;
+//     width: 200px;
+//     height: 293px;
+
+
+
+// }
+
+
+// .background2 {
+//     background: url("../../assets/imgs/backsplash.png") no-repeat;
+//     background-size: cover;
+//     background-position: center;
+//     background-attachment: scroll;
+// }
+
+}

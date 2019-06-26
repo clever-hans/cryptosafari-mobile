@@ -1,0 +1,83 @@
+<!--
+  Generated template for the CryptoanimalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+    <!-- <link rel=”stylesheet” type="text/css" href=”apple.scss”>  -->
+    <ion-navbar>
+        <ion-title>
+            <!-- <div style="float:left; display:flex; align-self: center;"align-title:center>{{cryptoanimal.name}}</div> -->
+            
+            <div class="title" style="float:center;">
+                <img src="../../assets/imgs/cryptolion.png" (click)="navigateToHome()" float-center  align-self-center width="40px" height="10px"style="display:inline-block" height="40px"/>
+                <div style="color:black" (click)="navigateToHome()">CryptoSafari</div>
+            </div>
+        </ion-title>
+        <ion-buttons end>
+  
+            <button ion-button icon-only menuToggle>
+                <ion-icon name="md-menu"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+
+    <h1 class="header">{{cryptoanimal.name}}</h1>
+
+</ion-col>
+  </ion-row>
+
+<ion-row><br></ion-row>
+  <ion-row>
+    <ion-col>
+  <div>
+      <ion-img class="cryptoanimal"  src="{{cryptoanimal.img}}" ></ion-img>
+      <br>
+     
+  </div>
+</ion-col>
+</ion-row>
+</ion-grid>
+
+
+<ion-grid padding class= "grid">
+  <ion-row justify-content-center responsive-sm class="orangeback">
+       <ion-col width-10>
+
+            <div><p>Price ($USD)</p></div>
+            <div class="cost">{{cryptoanimal.price}}</div>
+           
+        </ion-col>
+    </ion-row>     
+<ion-row class="whiteback">
+         <ion-col  >
+                <div> <p class="whitehead">Status</p></div>
+       
+               <div class="whitetext">{{cryptoanimal.status}}</div>
+               <div class="block_1 hline-bottom"> </div>
+               <div><p class="whitehead">Habitat</p></div>
+       
+               <div class="whitetext">{{cryptoanimal.habitat}}</div>
+
+         </ion-col>
+        </ion-row>
+    <ion-row class="orangeback">
+    <ion-col>
+         <div> <p class="head">Description</p></div>
+
+        <div class="text">{{cryptoanimal.description}}</div>
+        </ion-col>
+</ion-row>
+</ion-grid>
+</ion-content>

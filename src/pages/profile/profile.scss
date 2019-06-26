@@ -1,0 +1,71 @@
+page-profile {
+
+.profileinfo {
+    text-align: left;
+
+}
+
+.title {
+    // text-align: left;
+    // align-content: center;
+    text-emphasis: bold;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.cryptoanimal {
+    margin: auto;
+    height: 160px; 
+    width: 160px; 
+    background: white;
+    margin-top: 10px;
+  // border: 2px solid #fff;
+//    display: block;
+}
+.col-bottom{
+    border-bottom: solid black;
+    border-top: solid black;
+    }
+
+.col-left{
+    border-bottom: solid black;
+    border-top: solid black;
+    border-left: solid black;
+}
+
+.col-right{
+    border-bottom: solid black;
+    border-top: solid black;
+    border-right: solid black;
+}
+
+.grass {
+    margin: auto;
+    height: 200px; 
+    width: 800px; 
+    background: white;
+  // border: 2px solid #fff;
+//    display: block;
+}
+
+.tabs {
+    padding-top: 3px;
+
+}
+
+.profileText {
+    text-emphasis: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.statText {
+    font-size: 20px;
+}
+
+
+
+}

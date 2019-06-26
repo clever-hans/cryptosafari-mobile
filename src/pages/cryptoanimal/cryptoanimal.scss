@@ -1,0 +1,85 @@
+page-cryptoanimal {
+
+
+
+.cryptoanimal {
+    margin: auto;
+    height: 300px; 
+    width: 300px; 
+    background: white;
+    margin-top: 10px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+    // border: 2px solid #fff;
+//    display: block;
+    }
+
+p {
+    text-emphasis: bold;
+    font-size: 25px;
+    color: white;
+    align-items: left;
+}
+
+.info {
+    padding: 5px;
+
+}
+
+.cost {
+    text-emphasis: bold;
+    font-size: 30px;
+    color: white;
+    align-items: left;
+}
+
+.orangeback {
+    background-color: map-get($colors, primary);
+    padding: 30px;
+}
+
+.whiteback {
+    background-color: white;
+    padding: 30px;
+}
+
+.whitetext {
+    color: map-get($colors, primary);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 17px;
+}
+
+.grid {
+    padding: 30px;
+}
+
+.whitehead {
+    color: map-get($colors, primary);
+    text-emphasis: bold;
+    font-size: 25px;
+    align-items: left;
+}
+
+.text {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 17px;
+    color: white;
+    }
+
+
+.title {
+    // text-align: left;
+    // align-content: center;
+    text-emphasis: bold;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+}

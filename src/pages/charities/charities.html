@@ -1,0 +1,101 @@
+<!--
+  Generated template for the CharitiesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar hideBackButton>
+        <ion-title>
+            <!-- <div style="float:left; display:flex; align-self: center;"align-title:center>Charities</div> -->
+
+            <div class="title" style="float:center;">
+                <img src="../../assets/imgs/cryptolion.png" (click)="navigateToHome()" float-center align-self-center width="40px" height="10px"
+                    style="display:inline-block" height="40px" />
+                <div style="color:black" (click)="navigateToHome()">CryptoSafari</div>
+            </div>
+        </ion-title>
+        <ion-buttons end>
+
+            <button ion-button icon-only menuToggle>
+                <ion-icon name="md-menu"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-segment [(ngModel)]="icons" color="primary">
+        <ion-segment-button value="logo-octocat" (ionSelect)="navigateToProfile()">
+            <ion-icon name="logo-octocat"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="stats" (ionSelect)="navigateToPortfolio()">
+            <ion-icon name="stats"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="charities">
+            <ion-icon name="ribbon"></ion-icon>
+        </ion-segment-button>
+    </ion-segment>
+    <ion-grid>
+        <ion-row>
+            <br>
+        </ion-row>
+        <ion-row justify-content-center>
+            <ion-col>
+                <div class="cryptoAnimalText"> Explore New Safari Charities</div>
+                <div class="block_1 hline-bottom"></div>
+            </ion-col>
+
+        </ion-row>
+        <ion-row>
+            <br>
+        </ion-row>
+        <ion-row>
+            <br>
+        </ion-row>
+        <ion-row *ngFor="let row of grid">
+            <ion-col padding="0px" class="col-border" *ngFor="let charity of row">
+            <!-- <ion-col col-auto class="col-border" *ngFor="let charity of row"> -->
+                <ion-avatar item-start>
+                    <ion-img class="charitypic" src="{{charity.img}}" (click)="navigateToCharityProfile(charity)"></ion-img>
+                    <!-- <ion-icon  name={{charity.button}} (click)="navigateToCharityProfile(charity)" ></ion-icon> -->
+                </ion-avatar>
+<<<<<<< HEAD
+                <h2 class="charityname" (click)="navigateToCharityProfile(charity)">{{charity.name}}</h2>
+                <p (click)="navigateToCharityProfile(charity)">{{charity.mission}}</p>
+            </ion-col>
+        </ion-row>
+        <!-- <ion-row>
+    <ion-col *ngFor="let charity of charities">
+        <ion-avatar item-start>
+        <ion-icon  name={{charity.button}} (click)="navigateToCharityProfile(charity)" ></ion-icon>
+            </ion-avatar>
+        <h2  (click)="navigateToCharityProfile(charity)" >{{charity.name}}</h2>
+         <p  (click)="navigateToCharityProfile(charity)" >{{charity.mission}}</p>
+    </ion-col>
+
+</ion-row> -->
+        <!-- <ion-row>
+<ion-list>
+    <ion-item *ngFor="let charity of charities">
+        <ion-avatar item-start>
+            <ion-icon  name={{charity.button}} (click)="navigateToCharityProfile(charity)" ></ion-icon>
+          </ion-avatar>
+          <h2  (click)="navigateToCharityProfile(charity)" >{{charity.name}}</h2>
+        <p  (click)="navigateToCharityProfile(charity)" >{{charity.mission}}</p>
+    </ion-item>
+</ion-list>
+</ion-row> -->
+=======
+                <h2 class="charityname" (click)="navigateToCharityProfile(charity)" >{{charity.name}}</h2>
+                <p  (click)="navigateToCharityProfile(charity)" >{{charity.mission}}</p>
+        </ion-col>
+    </ion-row>
+>>>>>>> d98d2c3957c2ec613d0de5f04d8f5dbb918a5cc4
+
+    </ion-grid>
+
+</ion-content>

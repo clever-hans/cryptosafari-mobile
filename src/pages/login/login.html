@@ -1,0 +1,46 @@
+<ion-header>
+    
+    <ion-navbar>
+        <ion-title>
+            <!-- <div style="float:left; display:flex; align-self: center;"align-title:center>Sign In</div> -->
+            
+            <div class="title" style="float:center;">
+                <img src="../../assets/imgs/cryptolion.png" (click)="navigateToHome()" float-center  align-self-center width="40px" height="10px"style="display:inline-block" height="40px"/>
+                <div style="color:black" (click)="navigateToHome()">CryptoSafari</div>
+            </div>
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only menuToggle>
+                <ion-icon name="md-menu"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+    
+</ion-header>
+
+<ion-content padding>
+        <br>
+        <h1 class="header">Welcome Back to CryptoSafari</h1>
+   
+        
+<br>
+    <ion-list>
+
+            <ion-item>
+              <ion-label>Email</ion-label>
+              <ion-input type="text" [(ngModel)]="email"></ion-input>
+            </ion-item>
+          
+            <ion-item>
+              <ion-label>Password</ion-label>
+              <ion-input type="password" [(ngModel)]="password"></ion-input>
+            </ion-item>
+          
+          </ion-list>
+          
+          <div padding>
+            <button ion-button block (click)="login()">Sign In</button>
+          </div>
+
+        
+</ion-content>

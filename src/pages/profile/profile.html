@@ -1,0 +1,134 @@
+<ion-header>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1-beta.2/Chart.min.js"></script>
+        <script src="angles.js"></script>
+        
+        <ion-navbar hideBackButton>
+                <ion-title>
+                    <!-- <div style="float:left; display:flex; align-self: center;"align-title:center>My Profile</div> -->
+                    
+                    <div class="title" style="float:center;">
+                        <img src="../../assets/imgs/cryptolion.png" (click)="navigateToHome()" float-center  align-self-center width="40px" height="10px"style="display:inline-block" height="40px"/>
+                        <div style="color:black" (click)="navigateToHome()">CryptoSafari</div>
+                    </div>
+                </ion-title>
+                <ion-buttons end>
+          
+                    <button ion-button icon-only menuToggle>
+                        <ion-icon name="md-menu"></ion-icon>
+                    </button>
+                </ion-buttons>
+            </ion-navbar>
+</ion-header>
+
+<ion-content ng-app="app">
+        <ion-segment [(ngModel)]="icons" color="primary">
+                <ion-segment-button value="logo-octocat">
+                        <ion-icon class="tabs" name="logo-octocat"></ion-icon>
+                </ion-segment-button> 
+                <ion-segment-button value="stats" (ionSelect)="navigateToPortfolio()">
+                  <ion-icon class="tabs" name="stats"></ion-icon>
+                </ion-segment-button>
+                <ion-segment-button value="charities" (ionSelect)="navigateToCharities()" >         
+                  <ion-icon class="tabs" name="ribbon"></ion-icon>
+                </ion-segment-button>
+        </ion-segment>
+
+              
+<div [ngSwitch]="icons">
+
+    <ion-grid *ngSwitchCase="'logo-octocat'"> 
+        <ion-row><br></ion-row>
+        <ion-row justify-content-center>
+                        <!-- align="left" -->
+            <ion-col>
+                <div>
+                    <ion-img class="profilepic"  src="{{user_info.profile_pic}}" ></ion-img>
+                    <br>
+                    <div class="statText">{{this.firstName}} {{this.lastName}}</div>
+                </div>
+            </ion-col>
+            <ion-col align-self-center justify-content-end>
+
+                <h4 class="stats">${{this.donation_total}}</h4><br>
+                <div>Raised for Conservation </div>
+
+            </ion-col>
+            <ion-col align-self-center justify-content-end>
+                <h4 class="stats">{{this.donation_count}}</h4><br>
+                <div> Conservation Projects</div>
+            </ion-col>
+            <ion-col align-self-center justify-content-end>
+                <h4 class="stats">{{this.cryptoanimal_count}}</h4><br>
+                <div>Animals in Nature Reserve</div>
+            </ion-col>
+        </ion-row>
+       <ion-row><br></ion-row>
+       <ion-row justify-content-center>
+           <ion-col>
+           <div class="cryptoAnimalText"> My Nature Reserve</div>
+           <div style="color: white" class="block_1 hline-bottom"> </div>
+        </ion-col>
+    </ion-row>
+    <ion-row justify-content-center *ngFor="let row of grid">
+            <ion-col justify-content-center *ngFor="let cryptoanimal of row">
+                    <ion-avatar item-start>
+                        <div>
+                            <ion-img class="cryptoanimal"  src={{cryptoanimal.img}} (click)="navigateToCryptoanimal(cryptoanimal)"></ion-img>
+                        </div>
+                    </ion-avatar>
+            </ion-col>
+    </ion-row>
+
+ </ion-grid>
+
+<!-- <ion-grid *ngSwitchCase="'stats'">
+        <ion-row><br></ion-row>
+        <ion-row justify-content-center>
+                        
+            <ion-col>
+                <div>
+                    <ion-img class="profilepic"  src="../../assets/imgs/user.png" ></ion-img>
+                    <br>
+                   
+                </div>
+            </ion-col>
+            <ion-col align-self-center justify-content-end>
+                <h4 class="stats">$2,500</h4><br>
+                Raised for Conservation
+            </ion-col>
+            <ion-col align-self-center justify-content-end>
+                <h4 class="stats">7</h4><br>
+                Conservation Projects
+            </ion-col>
+            <ion-col align-self-center justify-content-end>
+                <h4 class="stats">25</h4><br>
+                Animals in Nature Reserve
+            </ion-col>
+        </ion-row>
+        <ion-row><br></ion-row>
+         <ion-row><br></ion-row>
+        <ion-row>
+            <ion-card>
+                <ion-card-header>
+                  Donations
+                </ion-card-header>
+                <ion-card-content>
+                  <canvas #doughnutCanvas ></canvas>
+                </ion-card-content>
+              </ion-card>
+            <div ng-controller="MainCtrl">
+            <canvas piechart options="animation: true, " legend=true responsive=true data="chart" width="300" height="300"></canvas>
+          </div>
+      </ion-row>
+
+        <ion-row justify-content-center style="text-align:center">
+            <div padding>
+                <button ion-button (click)="navigateToCharities()">See Charities</button>
+            <button ion-button (click)="navigateToPayments()">Fund your Donations</button>
+        </div></ion-row>
+    </ion-grid> -->
+
+</div>
+
+</ion-content>

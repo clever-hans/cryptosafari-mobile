@@ -1,0 +1,93 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background-color:primary;
+}
+
+.title {
+    // text-align: left;
+    // align-content: center;
+    text-emphasis: bold;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+}
+
+
+.toolbar-background {
+    $toolbar-background: primary;
+    color:primary;
+    text-align: center;
+  }
+
+.content  {
+    text-align: center;
+    text-emphasis: bold;
+}
+
+
+
+.profileText {
+    text-emphasis: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.profilepic {
+    margin: auto;
+    height: 180px; 
+    width: 180px; 
+  // border: 2px solid #fff;
+   border-radius: 50%;
+   box-shadow: 0 0 5px gray;
+   display: block;
+}
+
+.stats {
+    text-emphasis: bold;
+    font-size: 30px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    color: map-get($colors, primary);
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+
+.hline-bottom {
+    padding-bottom: 13px;
+    border-bottom: 2px solid map-get($colors, primary); 
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.cryptoAnimalText {
+    text-emphasis: bold;
+    font-size: 32px;
+    color: map-get($colors, primary);
+
+}

@@ -1,0 +1,213 @@
+<!--
+  Generated template for the PortfolioPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1-beta.2/Chart.min.js"></script>
+<script src="angles.js"></script>
+
+
+<ion-header>
+    <ion-navbar hideBackButton>
+        <ion-title>
+            <!-- <div style="float:left; display:flex; align-self: center;"align-text:center>Donations</div> -->
+
+            <div class="title" style="float:center;">
+                <img src="../../assets/imgs/cryptolion.png" (click)="navigateToHome()" float-center align-self-center width="40px" height="10px"
+                    style="display:inline-block" height="40px" />
+                <div style="color:black" (click)="navigateToHome()">CryptoSafari</div>
+            </div>
+        </ion-title>
+        <ion-buttons end>
+
+            <button ion-button icon-only menuToggle>
+                <ion-icon name="md-menu"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content ng-app="app">
+    <ion-segment [(ngModel)]="icons" color="primary">
+        <ion-segment-button value="logo-octocat" (ionSelect)="navigateToProfile()">
+            <ion-icon name="logo-octocat"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="stats">
+            <ion-icon name="stats"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="charities" (ionSelect)="navigateToCharities()">
+            <ion-icon name="ribbon"></ion-icon>
+        </ion-segment-button>
+<<<<<<< HEAD
+    </ion-segment>
+    <ion-grid>
+        <ion-row>
+            <br>
+        </ion-row>
+        <ion-row justify-content-center>
+            <!-- align="left" -->
+            <ion-col>
+                <div>
+                    <ion-img class="profilepic" src="{{user_info.profile_pic}}"></ion-img>
+                    <br>
+                    <!-- <div class="profileText">{{this.firstName}} {{this.lastName}}</div> -->
+                </div>
+            </ion-col>
+            <ion-col align-self-center justify-content-end>
+                <h4 class="stats">${{this.donation_total}}</h4>
+                <br> Raised for Conservation
+            </ion-col>
+            <ion-col align-self-center justify-content-end>
+                <h4 class="stats">{{this.donation_count}}</h4>
+                <br> Conservation Projects
+            </ion-col>
+            <ion-col align-self-center justify-content-end>
+                <h4 class="stats">8</h4>
+                <br> Animals in Nature Reserve
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <br>
+        </ion-row>
+        <!-- <ion-row>
+            <button ion-button full clear small (click)="donation_list()">
+                Update Chart!
+            </button>
+        </ion-row> -->
+
+        <ion-row>
+            <ion-col>
+                <ion-list>
+                    <!-- <ion-item>
+=======
+</ion-segment>
+<ion-grid>
+    <ion-row><br></ion-row>
+    <ion-row justify-content-center>
+                    <!-- align="left" -->
+        <ion-col>
+            <div>
+                <ion-img class="profilepic"  src="{{user_info.profile_pic}}" ></ion-img>
+                <br>
+                <!-- <div class="profileText">{{this.firstName}} {{this.lastName}}</div> -->
+            </div>
+        </ion-col>
+        <ion-col align-self-center justify-content-end>
+            <h4 class="stats">${{this.donation_total}}</h4><br>
+            Raised for Conservation
+        </ion-col>
+        <ion-col align-self-center justify-content-end>
+            <h4 class="stats">{{this.donation_count}}</h4><br>
+            Conservation Projects
+        </ion-col>
+        <ion-col align-self-center justify-content-end>
+            <h4 class="stats">{{this.cryptoanimal_count}}</h4><br>
+            Animals in Nature Reserve
+        </ion-col>
+    </ion-row>
+    <ion-row><br></ion-row>
+    <!-- <ion-row>  
+        <button ion-button full clear small (click)="donation_list()">
+        Update Chart!
+    </button></ion-row> -->
+
+    <ion-row>
+        <ion-col>
+        <ion-list>
+            <!-- <ion-item>
+>>>>>>> d98d2c3957c2ec613d0de5f04d8f5dbb918a5cc4
+                <ion-label>Donations</ion-label>
+
+                <ion-select [(ngModel)]="proj_select" multiple="false">
+                    <ion-option *ngFor="let donation of donations">
+                    {{donation.amount}}
+                    </ion-option>
+                   <ion-option>{{charity.name}} (All Projects)</ion-option>
+                </ion-select>
+                
+                </ion-item> -->
+
+<<<<<<< HEAD
+                </ion-list>
+            </ion-col>
+
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                    <ion-card>
+                            <ion-card-header>
+                              Doughnut Chart
+                            </ion-card-header>
+                            <ion-card-content>
+                              <canvas #doughnutCanvas></canvas>
+                            </ion-card-content>
+                          </ion-card>
+            </ion-col>
+
+        </ion-row>
+        <ion-row>
+            <!-- <ion-col>
+=======
+            </ion-list>
+        </ion-col>
+
+    </ion-row>
+    <!-- <ion-row>
+        <ion-col>
+        <ion-list>
+            <ion-item >
+                Total Monthly Donation Amount:
+            </ion-item>
+            <ion-item>
+                <ion-label fixed>$</ion-label>
+                <ion-input type="text" [(ngModel)]="total"></ion-input>
+            </ion-item>
+            <ion-item *ngFor="let MyCharity of user.myCharities">
+              <ion-list no-lines>
+                {{MyCharity.name}}
+                <ion-item>
+                      <div align="right"><ion-badge>{{MyCharity?.percentage}}% of Total Monthly Donations</ion-badge></div>
+                </ion-item>
+                <ion-item>
+                  <ion-range min="0" max="100" step="5" snaps="true" [(ngModel)]="MyCharity.percentage" color="danger">
+                    <ion-icon range-left small color="primary" name="heart-outline"></ion-icon>
+                    <ion-icon range-right color="primary" name="heart-outline"></ion-icon>
+                  </ion-range>
+                </ion-item>
+              </ion-list>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+
+    </ion-row>  -->
+    <ion-row>
+        <!-- <ion-col>
+>>>>>>> d98d2c3957c2ec613d0de5f04d8f5dbb918a5cc4
+        <div padding>
+                <button ion-button block (click)="test()">Test</button>
+                </div>
+        </ion-col> -->
+        </ion-row>
+
+
+        <ion-row>
+            <ion-card>
+                <ion-card-header>
+                    My Donations
+                </ion-card-header>
+                <ion-card-content>
+                    <canvas #doughnutCanvas></canvas>
+                </ion-card-content>
+            </ion-card>
+            <div ng-controller="MainCtrl">
+                <canvas piechart options="animation: true, " legend=true responsive=true data="chart" width="300" height="300"></canvas>
+            </div>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>
